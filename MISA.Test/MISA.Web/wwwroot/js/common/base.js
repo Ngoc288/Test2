@@ -82,7 +82,6 @@ class BaseJS {
                 method: "GET",
                 async: true,
             }).done(function (res) {
-                debugger;
                 $.each(res, function (index, obj) {
                     var tr = $(`<tr></tr>`);
                     $(tr).data('recordId', obj.CustomerId);
@@ -115,7 +114,6 @@ class BaseJS {
                     $('table tbody').append(tr);
                 })
             }).fail(function (res) {
-                debugger;
             })
         } catch (e) {
             console.log(e);

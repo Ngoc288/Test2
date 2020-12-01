@@ -18,3 +18,23 @@ C:\Users\hbngoc\Documents\Test\TestMISAFresher\MISA.Service\MISA.Test\MISA.Web\o
 C:\Users\hbngoc\Documents\Test\TestMISAFresher\MISA.Service\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.dll
 C:\Users\hbngoc\Documents\Test\TestMISAFresher\MISA.Service\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.pdb
 C:\Users\hbngoc\Documents\Test\TestMISAFresher\MISA.Service\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.genruntimeconfig.cache
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\appsettings.json
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\MISA.Web.exe
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\MISA.Web.deps.json
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\MISA.Web.runtimeconfig.json
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\MISA.Web.runtimeconfig.dev.json
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\MISA.Web.dll
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\bin\Debug\netcoreapp3.1\MISA.Web.pdb
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.csprojAssemblyReference.cache
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.AssemblyInfoInputs.cache
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.AssemblyInfo.cs
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.csproj.CoreCompileInputs.cache
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.RazorTargetAssemblyInfo.cache
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\staticwebassets\MISA.Web.StaticWebAssets.Manifest.cache
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\staticwebassets\MISA.Web.StaticWebAssets.xml
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.dll
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.pdb
+D:\MISAFRESHER\misa training\Test2\Test2\MISA.Test\MISA.Web\obj\Debug\netcoreapp3.1\MISA.Web.genruntimeconfig.cache

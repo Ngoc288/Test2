@@ -13,10 +13,13 @@ button, tr{
     width: 40px;
     border: none;
     outline: none;
-    color: #ADB5BD;
+    color: #000000;
     border-radius: 4px;
     margin-left: 16px;
 }
+    .button-ref:hover {
+        background-color: #E9EBEE;
+    }
 .text-align-center{
     text-align:center;
 }
@@ -72,6 +75,9 @@ text-align-right{
             border: none;
             outline: none;
         }
+            .content .action .add-button button:hover {
+                background-color: #019160;
+            }
 
             .content .action .add-button > i {
                 padding-right: 8px;

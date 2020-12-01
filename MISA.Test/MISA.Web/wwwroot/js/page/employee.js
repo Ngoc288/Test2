@@ -1,35 +1,35 @@
 ﻿$(document).ready(function () {
-    new EmployeeJS();
-    dialogDetail = $("#dialog").dialog({
-        autoOpen: false,
-        fluid: true,
-        //height: 400,
-        //width: '700px',
-        minWidth: 700,
-        resizable: true,
-        position: ({ my: "center", at: "center", of: window }),
-        modal: true,
-    });
-
-    $("#btnAdd").button().on("click", function () {
-        dialog.dialog("open");
-    });
-
+    new CustomerJS();
+    $(function () {
+        dialogDetail = $("#dialog-form").dialog({
+            autoOpen: false,
+            width: 775,
+            resizable: true,
+            position: ({ my: "center", at: "center", of: window }),
+            fluid: true,
+            modal: true,
+        
+        });
+        dialogConfirm = $("#dialog-confirm").dialog({
+            autoOpen: false,
+            resizable: false,
+            height: "auto",
+            width: 400,
+            modal: true,
+        });
+       
+    })
 })
 
-
-
 /**
- * Class quản lý các sự kiện cho trang Employee
+ * Class quản lý các sự kiện cho trang Customer
  * created by ngochtb(13/11/2020)*/
 
-class EmployeeJS extends BaseJS{
-    constructor() {
-        super();
+    class CustomerJS extends BaseJS {
+        constructor() {
+            super();
+        }
+        setApiRouter() {
+            this.apiRouter = "/api/customers";
+        }
     }
-
-    setDataURL() {
-        this.getDataURL = "http://api.manhnv.net/api/employees";
-    }
-
-}

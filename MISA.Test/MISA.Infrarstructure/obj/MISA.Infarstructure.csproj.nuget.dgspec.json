@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj": {}
+    "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+    "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
+        "projectUniqueName": "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
         "projectName": "MISA.ApplicationCore",
-        "projectPath": "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\hbngoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.ApplicationCore\\obj\\",
+        "projectPath": "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\E7450\\.nuget\\packages\\",
+        "outputPath": "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hbngoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\E7450\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,21 +52,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj": {
+    "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj",
+        "projectUniqueName": "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj",
         "projectName": "MISA.Infarstructure",
-        "projectPath": "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj",
-        "packagesPath": "C:\\Users\\hbngoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.Infrarstructure\\obj\\",
+        "projectPath": "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.Infrarstructure\\MISA.Infarstructure.csproj",
+        "packagesPath": "C:\\Users\\E7450\\.nuget\\packages\\",
+        "outputPath": "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.Infrarstructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hbngoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\E7450\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\hbngoc\\Documents\\Test\\TestMISAFresher\\MISA.Service\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
+              "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+                "projectPath": "D:\\MISAFRESHER\\misa training\\Test2\\Test2\\MISA.Test\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
               }
             }
           }
@@ -122,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
