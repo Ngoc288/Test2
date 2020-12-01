@@ -1,0 +1,4 @@
+D:\MISAFRESHER\misa training\Test\MISA.Service\MISA.Test\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
+D:\MISAFRESHER\misa training\Test\MISA.Service\MISA.Test\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csprojAssemblyReference.cache
+D:\MISAFRESHER\misa training\Test\MISA.Service\MISA.Test\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.AssemblyInfoInputs.cache
+D:\MISAFRESHER\misa training\Test\MISA.Service\MISA.Test\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.AssemblyInfo.cs

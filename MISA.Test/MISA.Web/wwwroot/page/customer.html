@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lý lao động</title>
+    <link href="/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="/css/common/common.css" rel="stylesheet" />
+    <link href="/css/common/main.css" rel="stylesheet" />
+    <link href="/css/common/header.css" rel="stylesheet" />
+    <link href="/css/common/navbar.css" rel="stylesheet" />
+    <link href="/css/common/content.css" rel="stylesheet" />
+    <link href="/css/common/logo.css" rel="stylesheet" />
+    <link href="/css/page/employee.css" rel="stylesheet" />
+    <link href="/css/common/dialog.css" rel="stylesheet" />
+    <link href="/css/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main">
+        <!--Navbar-->
+        <div class="layout-left">
+            <div class="logo">
+                <img class="logo-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MC40OSAzNjAuNDkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik05Ni42NTMsMEgxMy4wNjFDNy4yOSwwLDIuNjEyLDQuNjc4LDIuNjEyLDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5VjEwLjQ0OUMxMDcuMTAyLDQuNjc4LDEwMi40MjQsMCw5Ni42NTMsMHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQkJPHBhdGggZD0iTTIyMi4wNDEsMGgtODMuNTkyQzEzMi42NzgsMCwxMjgsNC42NzgsMTI4LDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5VjEwLjQ0OUMyMzIuNDksNC42NzgsMjI3LjgxMiwwLDIyMi4wNDEsMHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQkJPHBhdGggZD0iTTk2LjY1MywxMjUuMzg4SDEzLjA2MWMtNS43NzEsMC0xMC40NDksNC42NzgtMTAuNDQ5LDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5di04My41OTJDMTA3LjEwMiwxMzAuMDY2LDEwMi40MjQsMTI1LjM4OCw5Ni42NTMsMTI1LjM4OHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQkJPHBhdGggZD0iTTIyMi4wNDEsMTI1LjM4OGgtODMuNTkyYy01Ljc3MSwwLTEwLjQ0OSw0LjY3OC0xMC40NDksMTAuNDQ5djgzLjU5MmMwLDUuNzcxLDQuNjc4LDEwLjQ0OSwxMC40NDksMTAuNDQ5aDgzLjU5MiAgICAgYzUuNzcxLDAsMTAuNDQ5LTQuNjc4LDEwLjQ0OS0xMC40NDl2LTgzLjU5MkMyMzIuNDksMTMwLjA2NiwyMjcuODEyLDEyNS4zODgsMjIyLjA0MSwxMjUuMzg4eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMzQ3LjQyOSwwaC04My41OTJjLTUuNzcxLDAtMTAuNDQ5LDQuNjc4LTEwLjQ0OSwxMC40NDl2ODMuNTkyYzAsNS43NzEsNC42NzgsMTAuNDQ5LDEwLjQ0OSwxMC40NDloODMuNTkyICAgICBjNS43NzEsMCwxMC40NDktNC42NzgsMTAuNDQ5LTEwLjQ0OVYxMC40NDlDMzU3Ljg3OCw0LjY3OCwzNTMuMTk5LDAsMzQ3LjQyOSwweiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMzQ3LjQyOSwxMjUuMzg4aC04My41OTJjLTUuNzcxLDAtMTAuNDQ5LDQuNjc4LTEwLjQ0OSwxMC40NDl2ODMuNTkyYzAsNS43NzEsNC42NzgsMTAuNDQ5LDEwLjQ0OSwxMC40NDloODMuNTkyICAgICBjNS43NzEsMCwxMC40NDktNC42NzgsMTAuNDQ5LTEwLjQ0OXYtODMuNTkyQzM1Ny44NzgsMTMwLjA2NiwzNTMuMTk5LDEyNS4zODgsMzQ3LjQyOSwxMjUuMzg4eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNOTYuNjUzLDI1NkgxMy4wNjFjLTUuNzcxLDAtMTAuNDQ5LDQuNjc4LTEwLjQ0OSwxMC40NDl2ODMuNTkyYzAsNS43NzEsNC42NzgsMTAuNDQ5LDEwLjQ0OSwxMC40NDloODMuNTkyICAgICBjNS43NzEsMCwxMC40NDktNC42NzgsMTAuNDQ5LTEwLjQ0OXYtODMuNTkyQzEwNy4xMDIsMjYwLjY3OCwxMDIuNDI0LDI1Niw5Ni42NTMsMjU2eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMjIyLjA0MSwyNTZoLTgzLjU5MmMtNS43NzEsMC0xMC40NDksNC42NzgtMTAuNDQ5LDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5di04My41OTJDMjMyLjQ5LDI2MC42NzgsMjI3LjgxMiwyNTYsMjIyLjA0MSwyNTZ6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+CgkJCTxwYXRoIGQ9Ik0zNDcuNDI5LDI1NmgtODMuNTkyYy01Ljc3MSwwLTEwLjQ0OSw0LjY3OC0xMC40NDksMTAuNDQ5djgzLjU5MmMwLDUuNzcxLDQuNjc4LDEwLjQ0OSwxMC40NDksMTAuNDQ5aDgzLjU5MiAgICAgYzUuNzcxLDAsMTAuNDQ5LTQuNjc4LDEwLjQ0OS0xMC40NDl2LTgzLjU5MkMzNTcuODc4LDI2MC42NzgsMzUzLjE5OSwyNTYsMzQ3LjQyOSwyNTZ6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+CgkJPC9nPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" />
+                <img class="logo-img" src="../content/image/tải xuống.svg" />
+            </div>
+            <div class="navbar">
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Hồ sơ điện tử</div>
+                </div>
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Lập hồ sơ giấy</div>
+                </div>
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Theo dõi chi</div>
+                </div>
+                <a href="employee.html">
+                    <div class="menu menu-choose">
+
+                        <div class="menu-icon">
+                            <i class="far fa-copy"></i>
+                        </div>
+                        <div class="menu-text">Danh mục nhân viên</div>
+
+                    </div>
+                </a>
+                <a href="customer.html">
+                    <div class="menu menu-choose">
+
+                        <div class="menu-icon">
+                            <i class="far fa-copy"></i>
+                        </div>
+                        <div class="menu-text">Danh mục khách hàng</div>
+
+                    </div>
+                </a>
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Thiết lập</div>
+                </div>
+            </div>
+        </div>
+        <!--Header, content-->
+        <div class="layout-right">
+
+            <div class="header">
+                <div class="header-left">
+                    <span>Công ty cổ phần MISA TEST BHXH <i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="header-right">
+                    <div class="account"></div>
+                    <span>Demo Amis BHXH</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="action">
+                    <span>Quản lý khách hàng</span>
+                    <div class="button">
+                        <div class="action-button">Đồng bộ từ HRM</div>
+                       <!-- Button thêm mới-->
+                        <div class="add-button">
+                            <button id="btnAdd" class="button-left">
+                                <i class="fas fa-users"></i>
+                                <span>Thêm khách hàng</span>
+                            </button>
+                        </div>
+                      <!--  Button refresh-->
+                        <button id="btnRef" class="button-ref"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="input-search">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="Tìm kiếm theo mã nhân viên, họ tên" type="text" class="style-input" />
+                    </div>
+                    <div class="choose-department">
+                        <select id="cbxCustomerGroup" fieldValue="CustomerGroupId" api="/api/customergroups" class="style-input style-select">
+                            <option>Khách VIP</option>
+                            <option>Khách thường</option>
+                            <option>Khách vãng lai</option>
+                        </select>
+
+                    </div>
+                    <div class="choose-department width-choose">
+                        <select id="cbxCustomerGroup" class="style-input style-select">
+                            <option>Khách VIP</option>
+                            <option>Khách thường</option>
+                            <option>Khách vãng lai</option>
+                        </select>
+                    </div>
+                    <div class="button-action">
+                        <div class="action-download"></div>
+                    </div>
+                </div>
+               <!-- Table hiển thị dữ liệu-->
+                <div class="content-table">
+                    <table cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th fieldName="CustomerCode">Mã nhân viên</th>
+                                <th fieldName="FullName">Tên nhân viên</th>
+                                <th fieldName="MemberCardCode">Mã thẻ thành viên</th>
+                                <th fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
+                                <th fieldName="Gender">Giới tính</th>
+                                <th fieldName="PhoneNumber">Số điện thoại</th>
+                                <th fieldName="Email">Email</th>
+                                <th fieldName="CompanyName">Tên công ty</th>
+                                <th fieldName="Address">Địa chỉ</th>
+                                <th fieldName="CustomerGroupName">Thẻ khách</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--   Dialog thêm mới/chỉnh sửa-->
+    <div id="dialog-form" title="Quản lý khách hàng">
+        <div class="infor">
+            
+            <div class="display-flex">
+                <div class="avatar-left">
+                    <div class="input-avt"></div>
+                    <div class="infor-avt">Vui lòng chọn ảnh có định dạng <b>.jpeg, .jpg, .png, .gif</b></div>
+                </div>
+                <div class="half-right">
+                    <div class="display-flex">
+                        <div class="item item-birth">
+                            <p>Mã khách hàng (<span style="color:red;">*</span>)</p>
+                            <input id="txtCustomerCode" fieldName="CustomerCode" class="style-input input-required" placeholder="Nhập mã khách hàng" />
+                        </div>
+                        <div class="item item-birth">
+                            <p>Họ và tên (<span style="color:red;">*</span>)</p>
+                            <input id="txtFullName" fieldName="FullName" class="style-input input-required" placeholder="Nhập họ và tên" />
+                        </div>
+                    </div>
+                    <div class="display-flex">
+                        <div class="item item-birth">
+                            <p>Mã thẻ thành viên</p>
+                            <input id="txtCardCode" fieldName="MemberCardCode" class="style-input input-required" placeholder="Nhập mã thẻ thành viên" />
+                        </div>
+                        <div class="item item-birth">
+                            <p>Nhóm khách hàng</p>
+                            <select id="cbxCustomerGroup" fieldName="CustomerGroupName" fieldValue="CustomerGroupId" api="/api/customergroups" class="style-input style-select">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="display-flex">
+                        <div class="item item-birth">
+                            <p>Ngày sinh</p>
+                            <input id="txtDateOfBirth" fieldName="DateOfBirth" class="style-input input-required" type="date" placeholder="dd/mm/YYYY" />
+                        </div>
+                        <div class="item item-birth">
+                            <p>Giới tính</p>
+                            <div class="display-flex style-radio">
+                                <input id="txtFemale" fieldName="Gender" type="radio" name="gender" value="1" /> <label>Nam</label>
+                                <input id="txtMale" fieldName="Gender" type="radio" name="gender" value="0" /><label>Nữ</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display-flex">
+                <div class="item item-birth-bottom-left">
+                    <p>Email</p>
+                    <input id="txtEmail" fieldName="Email" class="style-input input-required" placeholder="Nhập email" />
+                </div>
+                <div class="item item-birth-bottom-right">
+                    <p>Số điện thoại</p>
+                    <input id="txtPhoneNumber" fieldName="PhoneNumber" class="style-input input-required" placeholder="Nhập số điện thoại" />
+                </div>
+            </div>
+            <div class="display-flex">
+                <div class="item item-birth-bottom-left">
+                    <p>Tên công ty</p>
+                    <input id="txtComName" fieldName="CompanyName" class="style-input" placeholder="Nhập tên công ty" />
+                </div>
+                <div class="item item-birth-bottom-right">
+                    <p>Mã số thuế</p>
+                    <input id="txtCode" fieldName="CompanyTextCode" class="style-input" placeholder="Nhập mã số thuế" />
+                </div>
+            </div>
+            <div class="item">
+                <p>Địa chỉ</p>
+                <input id="txtAddress" fieldName="Address" class="style-input" placeholder="Nhập địa chỉ" />
+            </div>
+
+        </div>
+        <div class="btn-bottom">
+            <button id="btnCancel" class="btn-bottom-cancel">Hủy</button>
+            <button id="btnSave" class="btn-bottom-save"><i class="far fa-save"></i><span class="btn-text">Lưu</span></button>
+        </div>
+    </div>
+<!--    Dialog thông báo xác nhận xoá-->
+    <div class="noti" id="dialog-confirm">
+        <div class="text-noti">
+            Bạn có chắc muốn xoá không?
+        </div>
+        <div class="btn-bottom">
+            <div class="group-footer-button">
+                <button class="btn-bottom-cancel" id="btnCFCancel">Huỷ</button>
+                <button class="btn-bottom-save" id="btnConfirm" >Đồng ý</button>
+            </div>
+        </div>
+    </div>
+    <!--    <div class="loading">
+            <div class="loading-modal"></div>
+            <div class="loading-icon"></div>
+
+        </div>-->
+
+
+    <script src="/js/common/jquery-3.5.1.min.js"></script>
+    <script src="/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="/js/common/common.js"></script>
+    <script src="/js/common/base.js"></script>
+    <script src="/js/page/customer.js"></script>
+</body>
+</html>

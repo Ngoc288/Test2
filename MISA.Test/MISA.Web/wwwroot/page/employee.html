@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lý lao động</title>
+    <link href="/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="/css/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet" />
+    <link href="/css/common/main.css" rel="stylesheet" />
+    <link href="/css/common/header.css" rel="stylesheet" />
+    <link href="/css/common/navbar.css" rel="stylesheet" />
+    <link href="/css/common/content.css" rel="stylesheet" />
+    <link href="/css/common/logo.css" rel="stylesheet" />
+    <link href="/css/page/employee.css" rel="stylesheet" />
+    <link href="/css/common/dialog.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="main">
+        <div class="layout-left">
+            <div class="logo">
+                <img class="logo-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MC40OSAzNjAuNDkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik05Ni42NTMsMEgxMy4wNjFDNy4yOSwwLDIuNjEyLDQuNjc4LDIuNjEyLDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5VjEwLjQ0OUMxMDcuMTAyLDQuNjc4LDEwMi40MjQsMCw5Ni42NTMsMHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQkJPHBhdGggZD0iTTIyMi4wNDEsMGgtODMuNTkyQzEzMi42NzgsMCwxMjgsNC42NzgsMTI4LDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5VjEwLjQ0OUMyMzIuNDksNC42NzgsMjI3LjgxMiwwLDIyMi4wNDEsMHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQkJPHBhdGggZD0iTTk2LjY1MywxMjUuMzg4SDEzLjA2MWMtNS43NzEsMC0xMC40NDksNC42NzgtMTAuNDQ5LDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5di04My41OTJDMTA3LjEwMiwxMzAuMDY2LDEwMi40MjQsMTI1LjM4OCw5Ni42NTMsMTI1LjM4OHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQkJPHBhdGggZD0iTTIyMi4wNDEsMTI1LjM4OGgtODMuNTkyYy01Ljc3MSwwLTEwLjQ0OSw0LjY3OC0xMC40NDksMTAuNDQ5djgzLjU5MmMwLDUuNzcxLDQuNjc4LDEwLjQ0OSwxMC40NDksMTAuNDQ5aDgzLjU5MiAgICAgYzUuNzcxLDAsMTAuNDQ5LTQuNjc4LDEwLjQ0OS0xMC40NDl2LTgzLjU5MkMyMzIuNDksMTMwLjA2NiwyMjcuODEyLDEyNS4zODgsMjIyLjA0MSwxMjUuMzg4eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMzQ3LjQyOSwwaC04My41OTJjLTUuNzcxLDAtMTAuNDQ5LDQuNjc4LTEwLjQ0OSwxMC40NDl2ODMuNTkyYzAsNS43NzEsNC42NzgsMTAuNDQ5LDEwLjQ0OSwxMC40NDloODMuNTkyICAgICBjNS43NzEsMCwxMC40NDktNC42NzgsMTAuNDQ5LTEwLjQ0OVYxMC40NDlDMzU3Ljg3OCw0LjY3OCwzNTMuMTk5LDAsMzQ3LjQyOSwweiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMzQ3LjQyOSwxMjUuMzg4aC04My41OTJjLTUuNzcxLDAtMTAuNDQ5LDQuNjc4LTEwLjQ0OSwxMC40NDl2ODMuNTkyYzAsNS43NzEsNC42NzgsMTAuNDQ5LDEwLjQ0OSwxMC40NDloODMuNTkyICAgICBjNS43NzEsMCwxMC40NDktNC42NzgsMTAuNDQ5LTEwLjQ0OXYtODMuNTkyQzM1Ny44NzgsMTMwLjA2NiwzNTMuMTk5LDEyNS4zODgsMzQ3LjQyOSwxMjUuMzg4eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNOTYuNjUzLDI1NkgxMy4wNjFjLTUuNzcxLDAtMTAuNDQ5LDQuNjc4LTEwLjQ0OSwxMC40NDl2ODMuNTkyYzAsNS43NzEsNC42NzgsMTAuNDQ5LDEwLjQ0OSwxMC40NDloODMuNTkyICAgICBjNS43NzEsMCwxMC40NDktNC42NzgsMTAuNDQ5LTEwLjQ0OXYtODMuNTkyQzEwNy4xMDIsMjYwLjY3OCwxMDIuNDI0LDI1Niw5Ni42NTMsMjU2eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMjIyLjA0MSwyNTZoLTgzLjU5MmMtNS43NzEsMC0xMC40NDksNC42NzgtMTAuNDQ5LDEwLjQ0OXY4My41OTJjMCw1Ljc3MSw0LjY3OCwxMC40NDksMTAuNDQ5LDEwLjQ0OWg4My41OTIgICAgIGM1Ljc3MSwwLDEwLjQ0OS00LjY3OCwxMC40NDktMTAuNDQ5di04My41OTJDMjMyLjQ5LDI2MC42NzgsMjI3LjgxMiwyNTYsMjIyLjA0MSwyNTZ6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+CgkJCTxwYXRoIGQ9Ik0zNDcuNDI5LDI1NmgtODMuNTkyYy01Ljc3MSwwLTEwLjQ0OSw0LjY3OC0xMC40NDksMTAuNDQ5djgzLjU5MmMwLDUuNzcxLDQuNjc4LDEwLjQ0OSwxMC40NDksMTAuNDQ5aDgzLjU5MiAgICAgYzUuNzcxLDAsMTAuNDQ5LTQuNjc4LDEwLjQ0OS0xMC40NDl2LTgzLjU5MkMzNTcuODc4LDI2MC42NzgsMzUzLjE5OSwyNTYsMzQ3LjQyOSwyNTZ6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+CgkJPC9nPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" />
+                <img class="logo-img" src="../content/image/tải xuống.svg" />
+            </div>
+            <div class="navbar">
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Hồ sơ điện tử</div>
+                </div>
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Lập hồ sơ giấy</div>
+                </div>
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Theo dõi chi</div>
+                </div>
+                <a href="employee.html">
+                    <div class="menu menu-choose">
+
+                        <div class="menu-icon">
+                            <i class="far fa-copy"></i>
+                        </div>
+                        <div class="menu-text">Danh mục nhân viên</div>
+
+                    </div>
+                </a>
+                <a href="customer.html">
+                    <div class="menu menu-choose">
+
+                        <div class="menu-icon">
+                            <i class="far fa-copy"></i>
+                        </div>
+                        <div class="menu-text">Danh mục khách hàng</div>
+
+                    </div>
+                </a>
+                <div class="menu menu-choose">
+                    <div class="menu-icon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                    <div class="menu-text">Thiết lập</div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-right">
+            <div class="header">
+                <div class="header-left">
+                    <span>Công ty cổ phần MISA TEST BHXH <i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="header-right">
+                    <div class="account"></div>
+                    <span>Demo Amis BHXH</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="action">
+                    <span>Quản lý nhân viên</span>
+                    <div class="button">
+                        <div class="action-button">Đồng bộ từ HRM</div>
+                        <button class="add-button" id="btnAdd">
+                                <i class="fas fa-users"></i>
+                                <span>Thêm lao động</span>
+
+                            <span class="down-button">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="input-search">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="Tìm kiếm theo mã nhân viên, họ tên" type="text" />
+                    </div>
+                    <div class="choose-department">
+                        <input disabled placeholder="Chọn bộ phận phòng ban" type="text" />
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="choose-department width-choose">
+                        <input disabled placeholder="Chọn bộ phận phòng ban" type="text" />
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="button-action">
+                        <div class="action-download"></div>
+                    </div>
+                </div>
+                <div class="content-table">
+                    <table cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th fieldName="EmployeeCode">Mã nhân viên</th>
+                                <th fieldName="FullName">Tên nhân viên</th>
+                                <th fieldName="Gender">Giới tính</th>
+                                <th fieldName="DateOfBirth">Ngày sinh</th>
+                                <th fieldName="PhoneNumber">Số điện thoại</th>
+                                <th fieldName="Email">Email</th>
+                                <th fieldName="Address">Địa chỉ</th>
+                                <th fieldName="Salary">Lương</th>
+                                <th fieldName="PositionName">Chức vụ</th>
+                                <th fieldName="DepartmentName">Phòng ban</th>
+                                <th fieldName="WorkStatusName">Tình trạng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/jquery-3.5.1.min.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <!--    <script src="/js/common/common.js"></script>-->
+    <script src="/js/common/base.js"></script>
+    <script src="/js/page/employee.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿/*
+    CSS các element nhỏ, không phụ thuộc thẻ bao ngoài
+    createdby ngochtb(13/11/2020)
+*/
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.style-input {
+    height: 40px;
+    padding: 0px 16px;
+    font-size: 13px;
+    width: calc(100% - 34px);
+    border-radius: 4px;
+    outline-color: #019160;
+    border: 1px solid #888888;
+}
+
+.style-select {
+    width: 100% !important;
+}
+
+
+.item-birth {
+    width: 49%;
+}
+
+.item-birth-bottom-left {
+    width: 66%;
+}
+
+.item-birth-bottom-right {
+    width: 33%;
+}
+
+.style-radio {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+}
+
+.border-red{
+    border: 1px solid red;
+}
+/*
+    CSS chi tiết các element phụ thuộc thẻ bao ngoài
+    createdby ngochtb(13/11/2020)
+
+*/
+
+.infor .avatar-left {
+    width: 30%;
+    height: auto;
+}
+
+    .infor .avatar-left .input-avt {
+        height: 224px;
+        border-radius: 50%;
+        background-color: red;
+    }
+
+    .infor .avatar-left .infor-avt {
+        text-align: center;
+    }
+
+.infor .half-right {
+    width: calc(70% - 24px) !important;
+}
+
+.btn-bottom {
+    margin-top: 24px;
+    float: right;
+}
+
+    .btn-bottom button {
+        height: 40px;
+        padding: 0px 16px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+    }
+
+        .btn-bottom .btn-bottom-cancel {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+            .btn-bottom .btn-bottom-cancel:hover {
+                background-color: #E9EBEE;
+            }
+
+        .btn-bottom .btn-bottom-save {
+            background-color: #019160;
+            color: white;
+        }
+
+            .btn-bottom .btn-bottom-save:hover {
+                background-color: #2FBE8E;
+            }
+            .btn-bottom .btn-bottom-save i{
+                padding-right: 8px;
+            }
